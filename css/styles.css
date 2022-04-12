@@ -1,0 +1,377 @@
+*{
+    margin: 10px;
+    padding: 10px;
+}
+
+h1 {color: White; background-color: black; text-align: center;}
+
+html{
+    font-size: 62.5%;
+}
+#productos {
+    background-color: chocolate; height: 500px;
+}
+
+.colorRojo {color: red;
+}
+
+.fuenteGrande {font-size: 100px;}
+
+.colorAzul {color: blue;}
+
+.fuenteMediana {font-size: 40px;}
+
+p {color:yellow;}
+
+.colorAmarillo {color: yellow;}
+
+ul {
+    list-style: none;
+    text-align: center;
+    background-color: black;
+
+}
+
+.cursiva {
+    font-style: italic;
+    font-weight: bolder;
+    font-family:"PT Serif";
+    line-height: 1.8;
+    color: white;
+    font-size: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+#imagen-fondo {
+    background-image: url("../img/15828353088368.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.card1{
+    background-color: black;
+    width: 30%;
+    height: 310px;
+    padding: 50px 30px;
+    position: relative;
+}
+
+.card1 img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    border: dotted 20px red;
+    padding: 0%;
+    border-radius: 20px;
+}
+
+.card2{
+    background-color: green;
+    padding: 100px;
+    margin-top: 60px;
+}
+
+.css{
+    border: solid 4px black;
+    padding: 5px;
+    display: inline-block;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    /*propiedades que hacen el problema*/
+    width: 100px;
+    height: 110px;
+    overflow: scroll;
+}
+
+.text-center{
+    text-align: center;
+}
+
+button{
+    border-radius: 10px;
+}
+
+li{
+    font-size: 20px;
+    margin-right: 20px;
+    text-align: right;
+}
+
+.esconder{
+    display: none;
+}
+
+.fondoVerde{
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: -20px;
+    padding: 10px 20px;
+}
+
+#enlaceWA {
+    color: greenyellow;
+    font-size: 60px;
+    position: fixed;
+    bottom: 0;
+    right: 40px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.listaNavegacion{
+    display: flex;
+    padding: 20px 0;
+}
+
+#galeria{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#cardsFlex{
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:stretch;
+    background-color: red;
+    height: 100%;
+}
+/*esto lo podria hacer con flex-flow:column wrap y quedaria igual*/
+
+.card1-flex{
+    background-color: black;
+    width: 20%;
+}
+
+.modificacion1{
+    order:3;
+}
+
+.modificacion7{
+    order:-1;
+}
+/*GRID EJEMPLO 1*/
+
+/*.grid{
+    display: grid;
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 40px 100px;
+}*/
+
+/*.grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    font-size: 30px;
+}*/
+
+/*.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}*/
+
+
+.border{
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+header{
+    grid-area: header ;
+}
+
+footer{
+    grid-area: footer;
+}
+
+section#productos{
+    grid-area: productos;
+    
+}
+
+section#servcios{
+    grid-area: servicios;
+}
+
+nav{
+    grid-area: nav;
+}
+aside{
+    grid-area: publicidad;
+}
+
+/*Grid Hijos*/
+
+.grid-hijos{
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    width: 95%;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-template-rows: 100px 100px;
+    grid-row-gap: 10px;
+}
+
+.grid-hijos div{
+    border: solid 1px;
+    font-size: 21px;
+    padding: 5px;
+    background-color: yellow;
+}
+
+.hijo-self{
+    justify-self: start;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 767px)  {
+    #grilla {
+        display:grid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "servicios"
+        "productos"
+        "publicidad"
+        "footer";
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #grilla {
+        display:grid;
+        grid-template-areas: 
+        "nav header header"
+        "nav productos publicidad"
+        "nav servicios publicidad"
+        "nav footer footer";
+        grid-template-rows: 100px 1fr 1fr 75px;
+        grid-template-columns: 20% auto 15%;
+        row-gap:50px;
+        column-gap:50px;
+    }
+}
+
+/*GRADIENTES*/
+
+#gradientes{
+    height: 500px;
+    background-image:linear-gradient(to left, red, yellow);
+    margin: 100px 0;
+}
+
+.transformaciones{
+    width: 100px ;
+    height:100px;
+    background-color: black;
+    margin: 0 auto;
+
+    /*Ejemplo de transform
+    transform: translate(10px, 20px);*/
+
+    /*Ejemplo de rotate
+    transform:rotate(60deg)*/
+
+    /*Ejemplo de Scale*/
+    /*transform:scale(2,1)*/
+
+    /*EJEMPLO DE SKEW*/
+    transform:skewY(25deg)
+
+}
+
+/*img:hover{
+    transform:scale(2);
+}*/
+
+/*.listaNavegacion li {
+    background-color: red;
+    height:100px;
+    transition: height 2s;
+}*/
+
+/*.listaNavegacion li:hover {
+    height: 200px;
+}*/
+
+.listaNavegacion li {
+    height: 100px;
+    transition:ease 2s;
+}
+
+.listaNavegacion li:hover{
+    background-color: red;
+}
+
+input {
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+}
+
+input:focus {
+    width:200px;
+    font-size: 24px;
+}
+
+.transformaciones2{
+    width:100px;
+    height:100px;
+    background-color: red;
+    border: solid 10px;
+}
+
+.transformaciones2:hover{
+    padding: 20px;
+    transform:skewY(25deg);
+}
+
+@keyframes un_efecto{
+    0%{width:100px;}
+    25%{width:300px;}
+    50%{width:200px;
+        background-color:red;}
+    75%{width:300px;}
+    100%{width:100px;
+        background-color: green;}    
+}
+
+#animaciones{
+width:100px;
+height: 100px;
+background-color:green;
+animation-name:un_efecto;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in;
+animation-duration: 2s;
+animation-delay:10s;
+}
+
+/*@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+h1{
+    animation-name:aparecer;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}*/
+
